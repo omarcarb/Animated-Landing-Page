@@ -1,13 +1,28 @@
+:root{
+    --background-100: #2e2e3e;
+    --background-200: #292937;
+    --background-300: #242430;
+    --background-400: #1f1f29;
+    --background-500: #1b1a22;
+    --background-600: #16161b;
+    --background-700: #101015;
+    --background-800: #09090c;
+    --background-900: #080808;
 body{
     margin: 0;
     padding: 0;
+    background-color: #2E2E3E;
 }
-nav{
+header{
     display: flex;
     width: 100%;
     box-sizing: border-box;
     flex-direction: row;
     justify-content: space-between;
+    padding: 1rem 5rem;
+}
+nav{
+    display: flex;
 }
 .categories{
     display: flex;
