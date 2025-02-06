@@ -1,18 +1,46 @@
 :root{
-    --background-100: #2e2e3e;
-    --background-200: #292937;
-    --background-300: #242430;
-    --background-400: #1f1f29;
-    --background-500: #1b1a22;
-    --background-600: #16161b;
-    --background-700: #101015;
-    --background-800: #09090c;
-    --background-900: #080808;
+    --gray-50: #fcfcfd; 
+    --gray-100: #f1f3f6; 
+    --gray-200: #e0e4ea; 
+    --gray-300: #c8ced9; 
+    --gray-400: #a8b3c4; 
+    --gray-500: #8292aa; 
+    --gray-600: #5b6b86; 
+    --gray-700: #384252; 
+    --gray-800: #242b35; 
+    --gray-900: #191d24; 
+    --gray-950: #15181e;
+
+    --primary-50: #fbfcff; 
+    --primary-100: #f0f4fd; 
+    --primary-200: #dee6fb; 
+    --primary-300: #c5d2f7; 
+    --primary-400: #a4b9f3; 
+    --primary-500: #7c9aed; 
+    --primary-600: #4c75e7; 
+    --primary-700: #1d4fd7; 
+    --primary-800: #102c79; 
+    --primary-900: #091740; 
+    --primary-950: #06102d;
+
+    --accent-50: #fdfaf7;
+    --accent-100: #FFF8F2;
+    --accent-200: #FEDFC9;
+    --accent-300: #FBBF9E;
+    --accent-400: #F19771;
+    --accent-500: #DE6845;
+    --accent-600: #B03B22;
+    --accent-700: #821F12;
+    --accent-800: #540E0A;
+    --accent-900: #260404;
+    --accent-950: #220303;
 }
 body{
     margin: 0;
     padding: 0;
-    background-color: #2E2E3E;
+    background-color: var(--gray-950);
+    font-family: "Source Sans 3", serif;
+    color: var(--gray-50);
 }
 header{
     display: flex;
@@ -21,10 +49,51 @@ header{
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem 5rem;
+    align-items: center;
+}
+button{
+    font-family: "Source Sans 3", serif;
+    display: flex;
+    padding: .5rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: .25rem;
+}
+button.primary{
+    background: linear-gradient(0deg, var(--primary-800), var(--primary-700));
+    color: var(--gray-100);
+    box-shadow: 0px -4px 8px var(--primary-800);
+
+    transition: all 200ms ease-in;
+}
+button.primary:hover, button.primary:active{
+    background: linear-gradient(15deg, var(--primary-700), var(--primary-600));
+    box-shadow: 0px 4px 16px var(--primary-700);
+}
+button.secondary{
+    background: var(--gray-800);
+    color: var(--gray-200);
 }
 nav{
     display: flex;
+    gap: 4rem;
 }
 .categories{
     display: flex;
+    gap: .5rem;
+}
+.dropdown_toggle{
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .5rem 2rem;
+}
+.dropdown_menu{
+    display: none;
+}
+.account_buttons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
