@@ -54,7 +54,32 @@ header{
     position: sticky;
     top: 0;
     backdrop-filter: blur(8px);
-    background-color: rgba(25, 29, 36, 0.4);
+    background-color: rgba(21, 24, 30, 0.4);
+}
+h1,h2,h3,h4,h5{
+    font-weight: 700;
+    font-family: "Source Sans 3", serif;
+}
+html{
+    font-size: 100%;
+}
+h1 {
+    font-size: 3rem; 
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem; 
+}
+h4{
+    font-size: 1.25rem; 
+}
+h5{
+    font-size: 1.125rem; 
+}
+small{
+    font-size: 0.750rem;
 }
 button{
     font-family: "Source Sans 3", serif;
@@ -84,6 +109,9 @@ button.secondary{
 button.secondary:hover, button.secondary:active{
     background: var(--gray-700);
     color: var(--gray-100);
+}
+section, footer{
+    padding: 2rem 10%;
 }
 nav{
     display: flex;
@@ -141,9 +169,22 @@ nav{
 .dropdown_item{
     padding: 1rem 2rem;
 }
-.account_buttons{
+.button_container{
     display: flex;
     gap: 1rem;
     justify-content: center;
     align-items: center;
+}
+.button_container#hero_buttons{
+    justify-content: left;
+}
+.hero_elements{
+    display: flex;
+    gap: 2rem;
+}
+.section_container{
+    display: flex;
+}
+.section_container.column{
+    flex-direction: column;
 }
