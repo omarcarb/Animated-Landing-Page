@@ -1,3 +1,5 @@
+
+
 function OpenMenu(button){
     let dropdownMenu = button.nextElementSibling;
     let dropdownToggle = button.getAttribute("aria-expanded")
@@ -25,6 +27,20 @@ document.addEventListener("click", function (event) {
         });
     }
 });
+function AddProducts(){
+    
+
+    let productItem = document.createElement('div');
+    productItem.classList.add('product_card');
+    let headingText = document.createElement('h1');
+    headingText.innerHTML = "Something something";
+
+    productItem.appendChild(headingText)
+
+    productGrid.appendChild(productItem)
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     
 });
+
