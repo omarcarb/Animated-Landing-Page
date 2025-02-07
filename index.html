@@ -17,30 +17,35 @@
         </svg>
         <nav>
             <div class="categories">
-                <div class="dropdown_toggle">
-                    <p>Products</p>
-                    <ul class="dropdown_menu">
-                        <li class="dropdown_item">Creams</li>
-                        <li class="dropdown_item">Medical</li>
-                        <li class="dropdown_item">Bundles</li>
+                <div class="dropdown">
+                    <button class="dropdown_toggle" aria-haspopup="true" aria-expanded="false" onclick="OpenMenu(this)">
+                        Products
+                    </button>
+                    <ul class="dropdown_menu" role="menu" hidden>
+                        <li class="dropdown_item" role="menuitem"><a href="#">Creams</a></li>
+                        <li class="dropdown_item" role="menuitem"><a href="#">Medical</a></li>
+                        <li class="dropdown_item" role="menuitem"><a href="#">Bundles</a></li>
                     </ul>
                 </div>
-                <div class="dropdown_toggle">
-                    <p>Support</p>
-                    <ul class="dropdown_menu">
-                        <li class="dropdown_item">Refills / Replacements</li>
-                        <li class="dropdown_item">Returns</li>
-                        <li class="dropdown_item">FAQ</li>
-                        <li class="dropdown_item">Contact Us</li>
+                <div class="dropdown">
+                    <button class="dropdown_toggle" aria-haspopup="true" aria-expanded="false" onclick="OpenMenu(this)">
+                        Support
+                    </button>
+                    <ul class="dropdown_menu" role="menu" hidden>
+                        <li class="dropdown_item" role="menuitem"><a href="#">Refills / Replacements</a></li>
+                        <li class="dropdown_item" role="menuitem"><a href="#">Returns</a></li>
+                        <li class="dropdown_item" role="menuitem"><a href="#">FAQ</a></li>
+                        <li class="dropdown_item" role="menuitem"><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
-                <div class="dropdown_toggle">
-                    <p>About Us</p>
-                    <ul class="dropdown_menu">
-                        <li class="dropdown_item">Our Mission</li>
-                        <li class="dropdown_item">Our Team</li>
-                        <li class="dropdown_item">Who We Are</li>
-                        <li class="dropdown_item">Our Sponsors</li>
+                <div class="dropdown">
+                    <button class="dropdown_toggle" aria-haspopup="true" aria-expanded="false" onclick="OpenMenu(this)">
+                        About Us
+                    </button>
+                    <ul class="dropdown_menu" role="menu" hidden>
+                        <li class="dropdown_item" role="menuitem"><a href="#">Our Mission</a></li>
+                        <li class="dropdown_item" role="menuitem"><a href="#">Our Team</a></li>
+                        <li class="dropdown_item" role="menuitem"><a href="#">Our Sponsors</a></li>
                     </ul>
                 </div>
             </div>

@@ -41,6 +41,7 @@ body{
     background-color: var(--gray-950);
     font-family: "Source Sans 3", serif;
     color: var(--gray-50);
+    position: relative;
 }
 header{
     display: flex;
@@ -50,6 +51,10 @@ header{
     justify-content: space-between;
     padding: 1rem 5rem;
     align-items: center;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(8px);
+    background-color: rgba(25, 29, 36, 0.4);
 }
 button{
     font-family: "Source Sans 3", serif;
@@ -74,22 +79,67 @@ button.primary:hover, button.primary:active{
 button.secondary{
     background: var(--gray-800);
     color: var(--gray-200);
+    transition: all 200ms ease-in;
+}
+button.secondary:hover, button.secondary:active{
+    background: var(--gray-700);
+    color: var(--gray-100);
 }
 nav{
     display: flex;
-    gap: 4rem;
+    gap: 3rem;
 }
 .categories{
     display: flex;
     gap: .5rem;
 }
+.dropdown{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .dropdown_toggle{
     font-size: 1rem;
     font-weight: 700;
     padding: .5rem 2rem;
+    background-color: transparent;
+    color: var(--gray-100);
+    position: relative;
+}
+.dropdown_toggle::after{
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 2px;
+    border-radius: 4px;
+    left: 0;
+    top: calc(100% - 4px);
+    background-color: var(--gray-500);
+    transition: all 300ms ease-in;
+}
+.dropdown_toggle:hover::after{
+    width: 100%;
 }
 .dropdown_menu{
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% - 1rem);
+    background-color: var(--gray-800);
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    width: max-content;
+    padding: .5rem 0rem;
+    gap: .5rem;
+    & a{
+        text-decoration: none;
+        color: var(--gray-100);
+    }
+}
+.dropdown_item{
+    padding: 1rem 2rem;
 }
 .account_buttons{
     display: flex;
