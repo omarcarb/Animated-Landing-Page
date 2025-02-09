@@ -1,165 +1,36 @@
-{
-    "products": [
-      {
-        "product_name": "Acitivated Skin Wash",
-        "product_type": "Skin Cream",
-        "product_price": [
-          {
-            "reg_price": "120.99",
-            "sales_price": "99.99"
-          }
-        ],
-        "product_description": [
-          {
-            "description_text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
-            "description_tags": [
-              "Skin",
-              "Tones",
-              "Wet",
-              "Matching Skin",
-              "Organic",
-              "No BPA"
-            ]
-          }
-        ]
-      },
-      {
-        "product_name": "Acitivated Skin Wash",
-        "product_type": "Skin Cream",
-        "product_price": [
-          {
-            "reg_price": "120.99",
-            "sales_price": "99.99"
-          }
-        ],
-        "product_description": [
-          {
-            "description_text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
-            "description_tags": [
-              "Skin",
-              "Tones",
-              "Wet",
-              "Matching Skin",
-              "Organic",
-              "No BPA"
-            ]
-          }
-        ]
-      },
-      {
-        "product_name": "Acitivated Skin Wash",
-        "product_type": "Skin Cream",
-        "product_price": [
-          {
-            "reg_price": "120.99",
-            "sales_price": "99.99"
-          }
-        ],
-        "product_description": [
-          {
-            "description_text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
-            "description_tags": [
-              "Skin",
-              "Tones",
-              "Wet",
-              "Matching Skin",
-              "Organic",
-              "No BPA"
-            ]
-          }
-        ]
-      },
-      {
-        "product_name": "Acitivated Skin Wash",
-        "product_type": "Skin Cream",
-        "product_price": [
-          {
-            "reg_price": "120.99",
-            "sales_price": "99.99"
-          }
-        ],
-        "product_description": [
-          {
-            "description_text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
-            "description_tags": [
-              "Skin",
-              "Tones",
-              "Wet",
-              "Matching Skin",
-              "Organic",
-              "No BPA"
-            ]
-          }
-        ]
-      },
-      {
-        "product_name": "Acitivated Skin Wash",
-        "product_type": "Skin Cream",
-        "product_price": [
-          {
-            "reg_price": "120.99",
-            "sales_price": "99.99"
-          }
-        ],
-        "product_description": [
-          {
-            "description_text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
-            "description_tags": [
-              "Skin",
-              "Tones",
-              "Wet",
-              "Matching Skin",
-              "Organic",
-              "No BPA"
-            ]
-          }
-        ]
-      },
-      {
-        "product_name": "Acitivated Skin Wash",
-        "product_type": "Skin Cream",
-        "product_price": [
-          {
-            "reg_price": "120.99",
-            "sales_price": "99.99"
-          }
-        ],
-        "product_description": [
-          {
-            "description_text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
-            "description_tags": [
-              "Skin",
-              "Tones",
-              "Wet",
-              "Matching Skin",
-              "Organic",
-              "No BPA"
-            ]
-          }
-        ]
-      },
-      {
-        "product_name": "Acitivated Skin Wash",
-        "product_type": "Skin Cream",
-        "product_price": [
-          {
-            "reg_price": "120.99",
-            "sales_price": "99.99"
-          }
-        ],
-        "product_description": [
-          {
-            "description_text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
-            "description_tags": [
-              "Skin",
-              "Tones",
-              "Wet",
-              "Matching Skin",
-              "Organic",
-              "No BPA"
-            ]
-          }
-        ]
-      }
-    ]
-}
+[{
+  "name": "Acitivated Skin Wash",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": false,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"]
+},{
+  "name": "Acitivated",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": false,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"]
+},{
+  "name": "Skin Wash",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": false,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"]
+},{
+  "name": "Wash",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": false,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"]
+},{
+  "name": "Cream",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": false,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"]
+}]

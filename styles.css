@@ -70,7 +70,7 @@ h2{
     font-size: 2rem;
 }
 h3{
-    font-size: 1.5rem; 
+    font-size: 1.45rem; 
 }
 h4{
     font-size: 1.25rem; 
@@ -134,6 +134,9 @@ nav{
     background-color: transparent;
     color: var(--gray-100);
     position: relative;
+    text-align: center;
+    width: 100%;
+    text-wrap: nowrap;
 }
 .dropdown_toggle::after{
     position: absolute;
@@ -174,17 +177,60 @@ nav{
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .button_container#hero_buttons{
     justify-content: left;
 }
+.button_container#card{
+    justify-content: left;
+    & button{
+        width: 100%;
+        justify-content: center;
+    }
+}
 .hero_elements{
     display: flex;
     gap: 2rem;
+}
+.hero_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
 }
 .section_container{
     display: flex;
 }
 .section_container.column{
     flex-direction: column;
+}
+.section_grid{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.product_card{
+    background-color: var(--gray-900);
+    border-radius: .025rem;
+    & .card_img{
+        max-width: 100%;
+    }
+}
+.card_thumbnail{
+    width: 100%;
+}
+.card_bottom{
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    padding: 1.5rem 1rem;
+}
+.card_text{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    & * {
+        margin: 0;
+    }
 }
