@@ -234,3 +234,18 @@ nav{
         margin: 0;
     }
 }
+.section_stats{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 2rem;
+    place-items: center;
+}
+.stat_container{
+    background-color: var(--gray-900);
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    border-radius: .25rem;
+    & img{
+        width: 100%;
+    }
+}
