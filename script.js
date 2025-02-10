@@ -1,13 +1,6 @@
-fetch("./product_list.json")
-    .then(response => response.json())
-    .then(data => showInfo(data))
-
-function showInfo(data){
-    console.log(data)
-    data.slice(0 , 4).forEach(product => CreateProductCard(product));
-}
-
-
+document.addEventListener("DOMContentLoaded", function () {
+    window.OpenMenu = OpenMenu;
+});
 function OpenMenu(button){
     let dropdownMenu = button.nextElementSibling;
     let dropdownToggle = button.getAttribute("aria-expanded")
@@ -32,12 +25,20 @@ document.addEventListener("click", function (event) {
         });
     }
 });
-document.addEventListener("DOMContentLoaded", function() {
-    
-});
+fetch("./product_list.json")
+    .then(response => response.json())
+    .then(data => PassData(data))
 
-function CreateProductCard(product){
-    let productGrid = document.querySelector('.section_grid')
+function PassData(data) {
+    let productGrid = document.querySelectorAll('.section_grid');
+
+    data.slice(0, 4).forEach(product => {
+        productGrid.forEach(grid => {
+            CreateProductCard(product, grid);
+        });
+    });
+}
+function CreateProductCard(product, productGrid){
 
     let productCard = document.createElement('div')
 

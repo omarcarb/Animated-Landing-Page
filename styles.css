@@ -38,7 +38,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: var(--gray-950);
+    background: linear-gradient(var(--gray-950), #07080a 20%);
     font-family: "Source Sans 3", serif;
     color: var(--gray-50);
     position: relative;
@@ -59,6 +59,7 @@ header{
 h1,h2,h3,h4,h5{
     font-weight: 700;
     font-family: "Source Sans 3", serif;
+    margin: 0;
 }
 html{
     font-size: 100%;
@@ -89,6 +90,8 @@ button{
     font-weight: 600;
     border: none;
     border-radius: .25rem;
+    height: 48px;
+    align-items: center;
 }
 button.primary{
     background: linear-gradient(0deg, var(--primary-800), var(--primary-700));
@@ -109,6 +112,17 @@ button.secondary{
 button.secondary:hover, button.secondary:active{
     background: var(--gray-700);
     color: var(--gray-100);
+}
+button.outline{
+    background: transparent;
+    outline: 2px solid var(--gray-500);
+    color: var(--gray-500);
+    transition: all 200ms ease-in;
+}
+button.outline:hover, button.outline:active{
+    background: var(--gray-500);
+    outline: 2px solid var(--gray-700);
+    color: var(--gray-950);
 }
 section, footer{
     padding: 2rem 10%;
@@ -167,10 +181,16 @@ nav{
     & a{
         text-decoration: none;
         color: var(--gray-100);
+        width: 100%;
+        display: inline-block;
     }
 }
 .dropdown_item{
     padding: 1rem 2rem;
+    transition: all 200ms ease-in;
+}
+.dropdown_item:hover{
+    background: var(--gray-700);
 }
 .button_container{
     display: flex;
@@ -181,11 +201,19 @@ nav{
 }
 .button_container#hero_buttons{
     justify-content: left;
+    margin-top: 1.5rem;
 }
 .button_container#card{
     justify-content: left;
     & button{
         width: 100%;
+        justify-content: center;
+    }
+}
+.button_container#section{
+    justify-content: left;
+    & button{
+        width: 240px;
         justify-content: center;
     }
 }
@@ -198,12 +226,31 @@ nav{
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    gap: 1rem;
+    padding: 1.5rem;
 }
 .section_container{
     display: flex;
+    justify-content: space-between;   
+    align-items: center;
 }
 .section_container.column{
     flex-direction: column;
+    align-items: start;
+}
+.section_header{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    padding: 1.5rem 0rem;
+    & *{
+        margin: 0;
+    }
+}
+.section_header.button{
+    flex-direction: row;
+    justify-content: space-between;
 }
 .section_grid{
     display: grid;
@@ -212,7 +259,8 @@ nav{
 }
 .product_card{
     background-color: var(--gray-900);
-    border-radius: .025rem;
+    border-radius: .25rem;
+    overflow: hidden;
     & .card_img{
         max-width: 100%;
     }
@@ -237,8 +285,12 @@ nav{
 .section_stats{
     display: grid;
     grid-template-columns: repeat(3, minmax(180px, 1fr));
-    gap: 2rem;
+    gap: 4rem;
     place-items: center;
+    padding: 0rem 10rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
 }
 .stat_container{
     background-color: var(--gray-900);
@@ -248,4 +300,8 @@ nav{
     & img{
         width: 100%;
     }
+}
+.section_reviews{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
 }
