@@ -85,6 +85,9 @@ h5{
 small{
     font-size: 0.750rem;
 }
+p{
+    margin: 0;
+}
 button{
     font-family: "Source Sans 3", serif;
     display: flex;
@@ -236,6 +239,7 @@ nav{
     display: flex;
     justify-content: space-between;   
     align-items: center;
+    gap: 2rem;
 }
 .section_container.column{
     flex-direction: column;
