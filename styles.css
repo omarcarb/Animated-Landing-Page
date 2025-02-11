@@ -320,3 +320,20 @@ nav{
     max-width: 48px;
     max-height: 48px;
 }
+.review_text_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: .75rem;
+    
+    & .review_date{
+        font-weight: 400;
+        color: var(--gray-500);
+        margin: 0;
+    }
+    & .review_rating{
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin: 0;
+    }
+}

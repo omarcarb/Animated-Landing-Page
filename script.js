@@ -89,8 +89,8 @@ function ReviewCard(review){
             <h3>${review.author.first_name} ${review.author.last_name}</h3>
             <p>${review.comment}</p>
             <div class="review_text_bottom">
-                <p>${review.date}</p>
-                <p>${rating}/5</p>
+                <p class="review_date">${review.date}</p>
+                <p class="review_rating">${rating}/5</p>
             </div>
         </div>
     `);
