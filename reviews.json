@@ -1,0 +1,60 @@
+[{
+    "author": {
+        "first_name": "John",
+        "last_name": "Smith"
+    },
+    "comment": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+    "rating" : 4.3,
+    "date": "12/22/2026",
+    "picture": "https://cdn.create.web.com/images/industries/common/images/placeholder-product-image-sq.jpg"
+},
+{
+    "author": {
+        "first_name": "John",
+        "last_name": "Smith"
+    },
+    "comment": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+    "rating" : 4.3,
+    "date": "12/22/2026",
+    "picture": "https://cdn.create.web.com/images/industries/common/images/placeholder-product-image-sq.jpg"
+},
+{
+    "author": {
+        "first_name": "John",
+        "last_name": "Smith"
+    },
+    "comment": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+    "rating" : 4.3,
+    "date": "12/22/2026",
+    "picture": "https://cdn.create.web.com/images/industries/common/images/placeholder-product-image-sq.jpg"
+},
+{
+    "author": {
+        "first_name": "John",
+        "last_name": "Smith"
+    },
+    "comment": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+    "rating" : 4.3,
+    "date": "12/22/2026",
+    "picture": "https://cdn.create.web.com/images/industries/common/images/placeholder-product-image-sq.jpg"
+},
+{
+    "author": {
+        "first_name": "John",
+        "last_name": "Smith"
+    },
+    "comment": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+    "rating" : 4.3,
+    "date": "12/22/2026",
+    "picture": "https://cdn.create.web.com/images/industries/common/images/placeholder-product-image-sq.jpg"
+},
+{
+    "author": {
+        "first_name": "John",
+        "last_name": "Smith"
+    },
+    "comment": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+    "rating" : 4.3,
+    "date": "12/22/2026",
+    "picture": "https://cdn.create.web.com/images/industries/common/images/placeholder-product-image-sq.jpg"
+}]

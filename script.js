@@ -64,3 +64,38 @@ function CreateProductCard(product, productGrid){
 
     productGrid.appendChild(productCard)
 }
+
+fetch('./reviews.json')
+    .then(response => response.json())
+    .then(reviewData => CreateReview(reviewData))
+
+function CreateReview(reviewData){
+    reviewData.slice(0 , 6).forEach(review =>{
+        ReviewCard(review)
+    })
+}
+
+function ReviewCard(review){
+    let reviewGrid = document.querySelector('.section_reviews')
+    let reviewCard = document.createElement('div')
+    reviewCard.classList.add('review_container')
+    let ratingCardNuber = review.rating;
+    let rating = ratingCardNuber.toString();
+
+    console.log(rating)
+
+    let content = document.createRange().createContextualFragment(`
+        <img src=${review.picture} alt="" class="review_profile_img">
+        <div class="review_text">
+            <h3>${review.author.first_name} ${review.author.last_name}</h3>
+            <p>${review.comment}</p>
+            <div class="review_text_bottom">
+                <p>${review.date}</p>
+                <p>${rating}/5</p>
+            </div>
+        </div>
+    `);
+
+    reviewCard.appendChild(content)
+    reviewGrid.appendChild(reviewCard)
+}

@@ -34,11 +34,14 @@
     --accent-800: #540E0A;
     --accent-900: #260404;
     --accent-950: #220303;
+
+    --main-gradient: linear-gradient(var(--gray-950), #07080a 20%);
+    --card-gradient: linear-gradient(var(--gray-800), var(--gray-900) 50%)
 }
 body{
     margin: 0;
     padding: 0;
-    background: linear-gradient(var(--gray-950), #07080a 20%);
+    background: var(--main-gradient);
     font-family: "Source Sans 3", serif;
     color: var(--gray-50);
     position: relative;
@@ -258,7 +261,7 @@ nav{
     gap: 1rem;
 }
 .product_card{
-    background-color: var(--gray-900);
+    background: var(--card-gradient);
     border-radius: .25rem;
     overflow: hidden;
     & .card_img{
@@ -293,9 +296,9 @@ nav{
     margin-bottom: 2rem;
 }
 .stat_container{
-    background-color: var(--gray-900);
+    background: var(--card-gradient);
     box-sizing: border-box;
-    padding: 2rem 1rem;
+    padding: 2rem 1.75rem;
     border-radius: .25rem;
     & img{
         width: 100%;
@@ -304,4 +307,16 @@ nav{
 .section_reviews{
     display: grid;
     grid-template-columns: repeat(2, minmax(240px, 1fr));
+    gap: 2rem;
+}
+.review_container{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--gray-800);
+    border-radius: .25rem;
+}
+.review_profile_img{
+    max-width: 48px;
+    max-height: 48px;
 }
