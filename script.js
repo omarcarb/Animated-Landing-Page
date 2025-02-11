@@ -82,7 +82,6 @@ function ReviewCard(review){
     let ratingCardNuber = review.rating;
     let rating = ratingCardNuber.toString();
 
-    console.log(rating)
 
     let content = document.createRange().createContextualFragment(`
         <img src=${review.picture} alt="" class="review_profile_img">
