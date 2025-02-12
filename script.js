@@ -98,3 +98,17 @@ function ReviewCard(review){
     reviewCard.appendChild(content)
     reviewGrid.appendChild(reviewCard)
 }
+document.addEventListener("mousemove", (event) => {
+    MoveBlob(event.clientX, event.clientY);
+});
+
+function MoveBlob(mouseX, mouseY){
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    let blob = document.querySelector('.blob')
+    let xPosition = (mouseX / screenWidth) * 100;
+    let yPosition = (mouseY / screenHeight) * 100;
+
+    blob.style.left = `${xPosition}vw`
+    blob.style.top = `${yPosition}vh`
+}

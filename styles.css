@@ -137,6 +137,16 @@ nav{
     display: flex;
     gap: 3rem;
 }
+.blob{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(40px);
+}
 .categories{
     display: flex;
     gap: .5rem;
@@ -323,6 +333,7 @@ nav{
 .review_profile_img{
     max-width: 48px;
     max-height: 48px;
+    border-radius: 4rem;
 }
 .review_text_bottom{
     display: flex;
