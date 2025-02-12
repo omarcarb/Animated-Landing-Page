@@ -141,11 +141,20 @@ nav{
     position: absolute;
     width: 500px;
     height: 500px;
-    z-index: -1;
-    left: 50%;
-    top: 50%;
     transform: translate(-50%, -50%);
+    z-index: -1;
     filter: blur(40px);
+    transform-origin: center;
+
+    animation: blobMove 10s infinite linear;
+}
+@keyframes blobMove {
+    0%{
+        transform: rotate(0deg) ;
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 .categories{
     display: flex;

@@ -98,17 +98,33 @@ function ReviewCard(review){
     reviewCard.appendChild(content)
     reviewGrid.appendChild(reviewCard)
 }
+
+let blob = document.querySelector('.blob')
+let targetX = window.innerWidth / 2;
+let targetY = window.innerHeight / 2;
+let currentX = targetX
+let currentY = targetY
+
+const easeFactor = 0.05;
+
 document.addEventListener("mousemove", (event) => {
-    MoveBlob(event.clientX, event.clientY);
+    
+    targetX = event.pageX
+    targetY = event.pageY
 });
 
-function MoveBlob(mouseX, mouseY){
-    const screenWidth = window.innerWidth;
-    const screenHeight = window.innerHeight;
-    let blob = document.querySelector('.blob')
-    let xPosition = (mouseX / screenWidth) * 100;
-    let yPosition = (mouseY / screenHeight) * 100;
 
-    blob.style.left = `${xPosition}vw`
-    blob.style.top = `${yPosition}vh`
+function animate(){
+    currentX += (targetX - currentX) * easeFactor
+    currentY += (targetY - currentY) * easeFactor
+
+    let rotation = (performance.now() /10) % 360
+
+    blob.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${rotation}deg)`;
+
+    console.log(blob.style.transform)
+
+    requestAnimationFrame(animate)
 }
+
+animate()
