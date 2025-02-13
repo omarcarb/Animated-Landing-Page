@@ -99,32 +99,31 @@ function ReviewCard(review){
     reviewGrid.appendChild(reviewCard)
 }
 
-let blob = document.querySelector('.blob')
+let blob = document.querySelector('.blob');
 let targetX = window.innerWidth / 2;
 let targetY = window.innerHeight / 2;
-let currentX = targetX
-let currentY = targetY
+let currentX = targetX;
+let currentY = targetY;
 
 const easeFactor = 0.05;
 
 document.addEventListener("mousemove", (event) => {
-    
-    targetX = event.pageX
-    targetY = event.pageY
+    targetX = event.pageX;
+    targetY = event.pageY;
 });
 
+function animate() {
+    currentX += (targetX - currentX) * easeFactor;
+    currentY += (targetY - currentY) * easeFactor;
 
-function animate(){
-    currentX += (targetX - currentX) * easeFactor
-    currentY += (targetY - currentY) * easeFactor
+    let rotation = (performance.now() / 50) % 360;
 
-    let rotation = (performance.now() /10) % 360
+    let blobWidth = blob.offsetWidth;
+    let blobHeight = blob.offsetHeight;
 
-    blob.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${rotation}deg)`;
+    blob.style.transform = `translate(${currentX - blobWidth / 2}px, ${currentY - blobHeight / 2}px) rotate(${rotation}deg)`;
 
-    console.log(blob.style.transform)
-
-    requestAnimationFrame(animate)
+    requestAnimationFrame(animate);
 }
 
-animate()
+animate();
