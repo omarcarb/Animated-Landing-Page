@@ -129,21 +129,44 @@ function animate() {
 
 animate();
 
-function AddAnimationDNA(aniamtionDelay){
+function AddAnimationDNA(animationDelay){
     let dnaConatiner = document.querySelector('.background_elements')
 
     let dnaContent = document.createRange().createContextualFragment(`
         <div class="dna_strand">
-            <div class="wrapper left">
-                <div class="circle_molecule left"></div>
+            <div class="wrapper left" data-delay="${animationDelay}">
+                <div class="circle_molecule left" data-delay="${animationDelay}"></div>
             </div>
-            <div class="molecule_strand"></div>
-            <div class="wrapper right">
-                <div class="circle_molecule right"></div>
+            <div class="molecule_strand" data-delay="${animationDelay}"></div>
+            <div class="wrapper right" data-delay="${animationDelay}">
+                <div class="circle_molecule right" data-delay="${animationDelay}"></div>
             </div>
         </div>`)
 
     dnaConatiner.appendChild(dnaContent)
+    AddAniamtionDelay()
+}
+function AddAniamtionDelay(){
+    let wrapperElement = document.querySelectorAll(".wrapper")
+    let circleElement = document.querySelectorAll(".circle_molecule")
+    let strandElement = document.querySelectorAll(".molecule_strand")
+
+    wrapperElement.forEach(wrapper =>{
+        let wrapperElementDelay = wrapper.getAttribute("data-delay");
+
+        wrapper.style.animationDelay = (wrapperElementDelay * 500) + "ms";
+    })
+    circleElement.forEach(circle =>{
+        let circleElementDelay = circle.getAttribute("data-delay")
+
+        circle.style.animationDelay = (circleElementDelay * 500) + "ms";
+    })
+    strandElement.forEach(strand=>{
+        let strandElementDelay = strand.getAttribute("data-delay")
+
+        strand.style.animationDelay = (strandElementDelay * 500) + "ms"
+    })
+
 }
 
 let maxDNACount = 35;
