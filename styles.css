@@ -240,6 +240,7 @@ nav{
     height: 100%;
     filter: blur(1px);
     z-index: -1;
+    transform: rotate(45deg) translateX(25%);
 }
 
 .dna_strand {
@@ -310,19 +311,19 @@ nav{
 }
 
 @keyframes scaleRight {
-    0% { transform: scale(1); background: var(--gray-600);}
-    25% { transform: scale(1.5); background: var(--gray-500);}
-    50% { transform: scale(1); background: var(--gray-600); z-index: 1;}
-    75% { transform: scale(0.5); background: var(--gray-700); z-index: -1;}
-    100% { transform: scale(1); background: var(--gray-600); z-index: 1;}
+    0% { transform: scale(1);}
+    25% { transform: scale(1.5);}
+    50% { transform: scale(1);}
+    75% { transform: scale(0.5);}
+    100% { transform: scale(1);}
 }
 
 @keyframes scaleLeft {
-    0% { transform: scale(1); background: var(--gray-600); z-index: 1;}
-    25% { transform: scale(0.5); background: var(--gray-700); z-index: -1;}
-    50% { transform: scale(1); background: var(--gray-600); z-index: 1;}
-    75% { transform: scale(1.5); background: var(--gray-500);}
-    100% { transform: scale(1); background: var(--gray-600);}
+    0% { transform: scale(1);}
+    25% { transform: scale(0.5);}
+    50% { transform: scale(1);}
+    75% { transform: scale(1.5);}
+    100% { transform: scale(1);}
 }
 .hero_elements{
     display: flex;

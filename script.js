@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     window.OpenMenu = OpenMenu;
+    AddAnimationDNA();
 });
 function OpenMenu(button){
     let dropdownMenu = button.nextElementSibling;
@@ -127,3 +128,28 @@ function animate() {
 }
 
 animate();
+
+function AddAnimationDNA(aniamtionDelay){
+    let dnaConatiner = document.querySelector('.background_elements')
+
+    let dnaContent = document.createRange().createContextualFragment(`
+        <div class="dna_strand">
+            <div class="wrapper left">
+                <div class="circle_molecule left"></div>
+            </div>
+            <div class="molecule_strand"></div>
+            <div class="wrapper right">
+                <div class="circle_molecule right"></div>
+            </div>
+        </div>`)
+
+    dnaConatiner.appendChild(dnaContent)
+}
+
+let maxDNACount = 35;
+var dnaCounter = 0;
+
+while(dnaCounter<maxDNACount){
+    AddAnimationDNA(dnaCounter);
+    dnaCounter++;
+}
