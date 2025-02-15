@@ -373,9 +373,22 @@ nav{
     background: var(--card-gradient);
     border-radius: .25rem;
     overflow: hidden;
+    outline: 0px solid var(--gray-950);
+    position: relative;
     & .card_img{
         max-width: 100%;
+        overflow: hidden;
     }
+    transition: all 300ms ease-in;
+}
+.card_img>img{
+    transition: all 300ms ease-in;
+}
+.card_img>img:hover{
+    transform: scale(1.15);
+}
+.product_card:hover{
+    outline: 2px solid var(--gray-700);
 }
 .card_thumbnail{
     width: 100%;
