@@ -462,3 +462,23 @@ nav{
         margin: 0;
     }
 }
+footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer_top{
+    display: flex;
+}
+.footer_topleft{
+    display: flex;
+    width: 30%;
+}
+.topleft_input_field{
+    display: flex;
+    flex-direction: column;
+}
+.footer_topright{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+}
