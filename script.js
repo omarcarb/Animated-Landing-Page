@@ -31,10 +31,18 @@ fetch("./product_list.json")
     .then(data => PassData(data))
 
 function PassData(data) {
-    let productGrid = document.querySelectorAll('.section_grid');
+    let productGrids = document.querySelectorAll('.section_grid');
 
-    data.slice(0, 4).forEach(product => {
-        productGrid.forEach(grid => {
+    if (productGrids.length === 0) return; 
+
+    productGrids.forEach(grid => {
+        let productVisibility = grid.getAttribute("data-item-display");
+
+        let filteredData = productVisibility === "onSale"
+            ? data.filter(product => product.on_sale).slice(0, 4)
+            : data.slice(0, 4);
+
+        filteredData.forEach(product => {
             CreateProductCard(product, grid);
         });
     });
@@ -44,25 +52,50 @@ function CreateProductCard(product, productGrid){
     let productCard = document.createElement('div')
 
     productCard.classList.add('product_card')
-    let content = document.createRange().createContextualFragment(`
-        <div class=card_img>
-            <img src="https://cdn.create.web.com/images/industries/common/images/placeholder-product-image-sq.jpg" alt="" class="card_thumbnail">
-            <div class=like_button></div>
-        </div>
-        <div class=card_bottom>
-            <div class=card_text>
-                <h3>${product.name}</h3>
-                <span>$${product.price}</span>
-            </div>
-            <div class=button_container id=card>
-                <button class="secondary">Add to Cart</button>
-                <button class="primary">Buy Now</button>
-            </div>
-            
-        </div>
-    `);
-    productCard.appendChild(content);
 
+    if(product.on_sale == true){
+        let content = document.createRange().createContextualFragment(`
+            <div class=card_img>
+                <img src="https://cdn.create.web.com/images/industries/common/images/placeholder-product-image-sq.jpg" alt="" class="card_thumbnail">
+                <div class=like_button></div>
+            </div>
+            <div class=card_bottom>
+                <div class=card_text>
+                    <h3>${product.name}</h3>
+                    <div class = "price_container">
+                        <span class = "original_price">$${product.price}</span>
+                        <span class = "sales_price">$${product.sale_price}</span>
+                    </div>
+                </div>
+                <div class=button_container id=card>
+                    <button class="secondary">Add to Cart</button>
+                    <button class="primary">Buy Now</button>
+                </div>
+                
+            </div>
+        `);
+        productCard.appendChild(content);
+    }
+    else{
+        let content = document.createRange().createContextualFragment(`
+            <div class=card_img>
+                <img src="https://cdn.create.web.com/images/industries/common/images/placeholder-product-image-sq.jpg" alt="" class="card_thumbnail">
+                <div class=like_button></div>
+            </div>
+            <div class=card_bottom>
+                <div class=card_text>
+                    <h3>${product.name}</h3>
+                    <span>$${product.price}</span>
+                </div>
+                <div class=button_container id=card>
+                    <button class="secondary">Add to Cart</button>
+                    <button class="primary">Buy Now</button>
+                </div>
+                
+            </div>
+        `);
+        productCard.appendChild(content);
+    }
     productGrid.appendChild(productCard)
 }
 
