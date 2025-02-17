@@ -29,12 +29,9 @@ document.addEventListener("click", function (event) {
 fetch("./product_list.json")
     .then(response => response.json())
     .then(data => PassData(data))
-
 function PassData(data) {
     let productGrids = document.querySelectorAll('.section_grid');
-
     if (productGrids.length === 0) return; 
-
     productGrids.forEach(grid => {
         let productVisibility = grid.getAttribute("data-item-display");
 
@@ -48,11 +45,8 @@ function PassData(data) {
     });
 }
 function CreateProductCard(product, productGrid){
-
     let productCard = document.createElement('div')
-
     productCard.classList.add('product_card')
-
     if(product.on_sale == true){
         let content = document.createRange().createContextualFragment(`
             <div class=card_img>
@@ -98,17 +92,14 @@ function CreateProductCard(product, productGrid){
     }
     productGrid.appendChild(productCard)
 }
-
 fetch('./reviews.json')
     .then(response => response.json())
     .then(reviewData => CreateReview(reviewData))
-
 function CreateReview(reviewData){
     reviewData.slice(0 , 6).forEach(review =>{
         ReviewCard(review)
     })
 }
-
 function ReviewCard(review){
     let reviewGrid = document.querySelector('.section_reviews')
     let reviewCard = document.createElement('div')
@@ -128,7 +119,6 @@ function ReviewCard(review){
             </div>
         </div>
     `);
-
     reviewCard.appendChild(content)
     reviewGrid.appendChild(reviewCard)
 }
@@ -138,42 +128,28 @@ let targetX = window.innerWidth / 2;
 let targetY = window.innerHeight / 2;
 let currentX = targetX;
 let currentY = targetY;
-
 const easeFactor = 0.1;
-
 document.addEventListener("mousemove", (event) => {
     targetX = event.clientX;
     targetY = event.clientY;
 });
-
 function animate() {
     currentX += (targetX - currentX) * easeFactor;
     currentY += (targetY - currentY) * easeFactor;
-
     const documentHeight = document.documentElement.scrollHeight;
     const stopPointY = documentHeight - 200; 
-
     console.log(stopPointY)
     const maxX = document.documentElement.scrollWidth - blob.offsetWidth;
     const maxY = stopPointY - blob.offsetHeight;
-
-    // Keep the blob within the document bounds, and stop it at the stop point
     currentX = Math.max(0, Math.min(currentX, maxX));
     currentY = Math.max(0, Math.min(currentY, maxY));
-
-    // Apply the transform to move the blob
     blob.style.left = `${currentX}px`;
     blob.style.top = `${currentY}px`;
-
     requestAnimationFrame(animate);
 }
-
 animate();
-
-
 function AddAnimationDNA(animationDelay){
     let dnaConatiner = document.querySelector('.background_elements')
-
     let dnaContent = document.createRange().createContextualFragment(`
         <div class="dna_strand">
             <div class="wrapper left" data-delay="${animationDelay}">
@@ -184,7 +160,6 @@ function AddAnimationDNA(animationDelay){
                 <div class="circle_molecule right" data-delay="${animationDelay}"></div>
             </div>
         </div>`)
-
     dnaConatiner.appendChild(dnaContent)
     AddAniamtionDelay()
 }
@@ -208,12 +183,9 @@ function AddAniamtionDelay(){
 
         strand.style.animationDelay = (strandElementDelay * 500) + "ms"
     })
-
 }
-
 let maxDNACount = 35;
 var dnaCounter = 0;
-
 while(dnaCounter<maxDNACount){
     AddAnimationDNA(dnaCounter);
     dnaCounter++;

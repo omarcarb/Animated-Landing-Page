@@ -43,4 +43,49 @@
   "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
   "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"],
   "image": ""
+},{
+  "name": "Wash",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": true,
+  "sale_price": 59.99,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"],
+  "image": ""
+},{
+  "name": "Wash",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": true,
+  "sale_price": 59.99,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"],
+  "image": ""
+},{
+  "name": "Wash",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": true,
+  "sale_price": 59.99,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"],
+  "image": ""
+},{
+  "name": "Wash",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": true,
+  "sale_price": 59.99,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"],
+  "image": ""
+},{
+  "name": "Wash",
+  "type": "Skin Cream",
+  "price": 129.99,
+  "on_sale": true,
+  "sale_price": 59.99,
+  "description":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores labore quas a porro nesciunt nostrum delectus aut odio eius, natus aperiam. Rerum eius non laudantium facilis corrupti! Unde, voluptates rerum!",
+  "tags": ["Skin","Tones","Wet","Matching Skin","Organic","No BPA"],
+  "image": ""
 }]
