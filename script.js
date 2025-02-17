@@ -100,34 +100,43 @@ function ReviewCard(review){
     reviewGrid.appendChild(reviewCard)
 }
 
-let blob = document.querySelector('.blob');
+const blob = document.querySelector('.blob');
 let targetX = window.innerWidth / 2;
 let targetY = window.innerHeight / 2;
 let currentX = targetX;
 let currentY = targetY;
 
-const easeFactor = 0.05;
+const easeFactor = 0.1;
 
 document.addEventListener("mousemove", (event) => {
-    targetX = event.pageX;
-    targetY = event.pageY;
+    targetX = event.clientX;
+    targetY = event.clientY;
 });
 
 function animate() {
     currentX += (targetX - currentX) * easeFactor;
     currentY += (targetY - currentY) * easeFactor;
 
-    let rotation = (performance.now() / 50) % 360;
+    const documentHeight = document.documentElement.scrollHeight;
+    const stopPointY = documentHeight - 200; 
 
-    let blobWidth = blob.offsetWidth;
-    let blobHeight = blob.offsetHeight;
+    console.log(stopPointY)
+    const maxX = document.documentElement.scrollWidth - blob.offsetWidth;
+    const maxY = stopPointY - blob.offsetHeight;
 
-    blob.style.transform = `translate(${currentX - blobWidth / 2}px, ${currentY - blobHeight / 2}px) rotate(${rotation}deg)`;
+    // Keep the blob within the document bounds, and stop it at the stop point
+    currentX = Math.max(0, Math.min(currentX, maxX));
+    currentY = Math.max(0, Math.min(currentY, maxY));
+
+    // Apply the transform to move the blob
+    blob.style.left = `${currentX}px`;
+    blob.style.top = `${currentY}px`;
 
     requestAnimationFrame(animate);
 }
 
 animate();
+
 
 function AddAnimationDNA(animationDelay){
     let dnaConatiner = document.querySelector('.background_elements')
