@@ -455,7 +455,7 @@ nav{
 .section_stats{
     display: grid;
     grid-template-columns: repeat(3, minmax(180px, 1fr));
-    gap: 4rem;
+    gap: 2rem;
     place-items: center;
     padding: 0rem 10rem;
     width: 100%;
