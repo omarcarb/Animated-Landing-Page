@@ -441,7 +441,7 @@ nav{
 }
 .price_container{
     display: flex;
-    gap: 1rem;
+    gap: .5rem;
     & .original_price{
         text-decoration: line-through;
         font-size: .75rem;
