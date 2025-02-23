@@ -6,7 +6,7 @@
   "sale_price": 59.99,
   "description":"A lightweight moisturizer infused with organic botanicals to enhance your skin's natural glow while protecting the environment.",
   "tags": ["Radiance","Moisturizer","Organic","EcoFriendly","Glow","No BPA"],
-  "image": ""
+  "image": "./images/eco_radiance_cream.png"
 },{
   "name": "Nature's Hydration Balm",
   "type": "Balm",
