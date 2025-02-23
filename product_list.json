@@ -15,7 +15,7 @@
   "sale_price": 59.99,
   "description":"Deeply hydrating balm made from sustainably sourced ingredients, perfect for dry skin and eco-conscious consumers.",
   "tags": ["Hydration","Balm","Sustainable","Natural","Organic","Moisture"],
-  "image": ""
+  "image": "./images/natures_hydration_lip_balm.png"
 },{
   "name": "Green Tea Revitalizing Cream",
   "type": "Cream",

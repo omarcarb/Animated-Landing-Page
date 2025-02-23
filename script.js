@@ -50,7 +50,7 @@ function CreateProductCard(product, productGrid){
     if(product.on_sale == true){
         let content = document.createRange().createContextualFragment(`
             <div class=card_img>
-                <img src="${product.image}" alt="" class="card_thumbnail">
+                <img src="${product.image}" alt="image for ${product.name}" class="card_thumbnail">
                 <div class=like_button></div>
             </div>
             <div class=card_bottom>
@@ -73,7 +73,7 @@ function CreateProductCard(product, productGrid){
     else{
         let content = document.createRange().createContextualFragment(`
             <div class=card_img>
-                <img src="${product.image}" alt="" class="card_thumbnail">
+                <img src="${product.image}" alt="image for ${product.name}" class="card_thumbnail">
                 <div class=like_button></div>
             </div>
             <div class=card_bottom>
