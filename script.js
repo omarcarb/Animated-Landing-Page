@@ -124,30 +124,31 @@ function ReviewCard(review){
 }
 
 const blob = document.querySelector('.blob');
+let currentX = 0;
 let targetX = window.innerWidth / 2;
+let currentY = 0;
 let targetY = window.innerHeight / 2;
-let currentX = targetX;
-let currentY = targetY;
 const easeFactor = 0.1;
+
 document.addEventListener("mousemove", (event) => {
     targetX = event.clientX;
     targetY = event.clientY;
 });
+
 function animate() {
     currentX += (targetX - currentX) * easeFactor;
     currentY += (targetY - currentY) * easeFactor;
-    const documentHeight = document.documentElement.scrollHeight;
-    const stopPointY = documentHeight - 200; 
-    console.log(stopPointY)
-    const maxX = document.documentElement.scrollWidth - blob.offsetWidth;
-    const maxY = stopPointY - blob.offsetHeight;
-    currentX = Math.max(0, Math.min(currentX, maxX));
-    currentY = Math.max(0, Math.min(currentY, maxY));
+
+    currentX = Math.max(0, Math.min(currentX, window.innerWidth - blob.offsetWidth));
+    currentY = Math.max(0, Math.min(currentY, window.innerHeight - blob.offsetHeight));
+
     blob.style.left = `${currentX}px`;
     blob.style.top = `${currentY}px`;
     requestAnimationFrame(animate);
 }
+
 animate();
+
 function AddAnimationDNA(animationDelay){
     let dnaConatiner = document.querySelector('.background_elements')
     let dnaContent = document.createRange().createContextualFragment(`

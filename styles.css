@@ -42,7 +42,6 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: auto;
     background: var(--main-gradient);
     font-family: "Source Sans 3", serif;
     color: var(--gray-50);
@@ -409,18 +408,17 @@ img{
     }
     transition: all 300ms ease-in;
 }
-.card_img>img{
+.card_thumbnail{
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
     transition: all 300ms ease-in;
 }
-.card_img>img:hover{
+.card_thumbnail:hover{
     transform: scale(1.15);
 }
 .product_card:hover{
     outline: 2px solid var(--gray-700);
-}
-.card_thumbnail{
-    width: 100%;
-    height: 60%;
 }
 .card_bottom{
     display: flex;
