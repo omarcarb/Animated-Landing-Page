@@ -132,7 +132,8 @@ const easeFactor = 0.1;
 
 document.addEventListener("mousemove", (event) => {
     targetX = event.clientX;
-    targetY = event.clientY;
+    targetY = event.pageY;
+
 });
 
 function animate() {
@@ -140,7 +141,7 @@ function animate() {
     currentY += (targetY - currentY) * easeFactor;
 
     currentX = Math.max(0, Math.min(currentX, window.innerWidth - blob.offsetWidth));
-    currentY = Math.max(0, Math.min(currentY, window.innerHeight - blob.offsetHeight));
+    currentY = Math.max(0, Math.min(currentY, (document.documentElement.scrollHeight - blob.offsetHeight) - blob.offsetHeight));
 
     blob.style.left = `${currentX}px`;
     blob.style.top = `${currentY}px`;
