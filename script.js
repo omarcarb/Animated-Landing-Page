@@ -1,7 +1,10 @@
+
+
 document.addEventListener("DOMContentLoaded", function () {
     window.OpenMenu = OpenMenu;
     AddAnimationDNA();
 });
+
 function OpenMenu(button){
     let dropdownMenu = button.nextElementSibling;
     let dropdownToggle = button.getAttribute("aria-expanded")
@@ -94,7 +97,11 @@ function CreateProductCard(product, productGrid){
 }
 fetch('./reviews.json')
     .then(response => response.json())
-    .then(reviewData => CreateReview(reviewData))
+    .then(reviewData =>{ 
+        CreateReview(reviewData)
+        const targets = document.getElementsByClassName('review_container');
+        ObserveReviews(targets);
+    })
 function CreateReview(reviewData){
     reviewData.slice(0 , 6).forEach(review =>{
         ReviewCard(review)
@@ -104,6 +111,8 @@ function ReviewCard(review){
     let reviewGrid = document.querySelector('.section_reviews')
     let reviewCard = document.createElement('div')
     reviewCard.classList.add('review_container')
+    reviewCard.setAttribute("data-animation-index","0")
+    reviewCard.setAttribute("data-animated", false)
     let ratingCardNuber = review.rating;
     let rating = ratingCardNuber.toString();
 
@@ -121,6 +130,32 @@ function ReviewCard(review){
     `);
     reviewCard.appendChild(content)
     reviewGrid.appendChild(reviewCard)
+}
+
+function ObserveReviews(targets){
+    let observer;
+    const options = {
+        root: null,
+        rootMargin: "-100px",
+        threshold: 0.1
+    }
+
+    function AnimateReviewCards(entries, observer) {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                entry.target.setAttribute("data-animation-index", index)
+                entry.target.style.animationDelay = index * 200 + "ms"
+                entry.target.setAttribute("data-animated", true)
+
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+    observer = new IntersectionObserver(AnimateReviewCards, options);
+    
+    Array.from(targets).forEach(target => {
+        observer.observe(target);
+    });
 }
 
 const blob = document.querySelector('.blob');

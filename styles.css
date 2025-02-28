@@ -494,11 +494,27 @@ img{
     padding: 2rem;
     background-color: var(--gray-800);
     border-radius: .25rem;
+    opacity: 0;
+}
+.review_container[data-animated = true]{
+    animation: fadeUp 1000ms ease-out forwards;
+}
+@keyframes fadeUp {
+    0%{
+        transform: translateY(300px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
 }
 .review_profile_img{
+    min-width: 48px;
     max-width: 48px;
-    max-height: 48px;
+    height: 48px;
     border-radius: 4rem;
+    object-fit: cover;
 }
 .review_text_bottom{
     display: flex;
