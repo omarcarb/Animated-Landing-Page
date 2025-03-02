@@ -491,7 +491,7 @@ img{
 .review_container{
     display: flex;
     gap: 2rem;
-    padding: 2rem;
+    padding: 1rem 2rem;
     background-color: var(--gray-800);
     border-radius: .25rem;
     opacity: 0;
