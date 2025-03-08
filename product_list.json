@@ -60,7 +60,7 @@
   "sale_price": 36.99,
   "description":"A repairing cream packed with herbal essences that work to restore and rejuvenate your skin while supporting sustainable practices.",
   "tags": ["Repair","Herbal","Rejuvenate","Sustainable","Skincare"],
-  "image": ""
+  "image": "./images/herbal_essesnce_repair.png"
 },{
   "name": "Ocean Breeze SPF Lotion",
   "type": "SPF Lotion",
