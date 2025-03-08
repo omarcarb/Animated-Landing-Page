@@ -359,6 +359,12 @@ img{
     display: flex;
     gap: 2rem;
 }
+.product_features_container_hero{
+    max-height: 600px;
+    & img{
+        height: 100%;
+    }
+}
 .hero_text{
     display: flex;
     flex-direction: column;
