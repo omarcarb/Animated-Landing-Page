@@ -24,7 +24,7 @@
   "sale_price": 59.99,
   "description":"Enriched with green tea extract, this cream revitalizes tired skin while promoting a healthier planet.",
   "tags": ["Revitalizing","GreenTea","EcoConscious","Skincare","Natural"],
-  "image": ""
+  "image": "./images/green_tea_cream.png"
 },{
   "name": "Botanical Bliss Night Cream",
   "type": "Night Cream",
