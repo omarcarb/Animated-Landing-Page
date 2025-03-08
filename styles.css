@@ -35,7 +35,7 @@
     --accent-950: #220303;
 
     --main-gradient: linear-gradient(var(--primary-100), var(--primary-200));
-    --card-gradient: linear-gradient(var(var(--primary-200)), var(var(--primary-300)) 50%)
+    --card-gradient: linear-gradient(var(--primary-300), var(--primary-400) 50%)
 }
 body{
     margin: 0;
@@ -206,7 +206,7 @@ img{
     border-radius: 4px;
     left: 0;
     top: calc(100% - 4px);
-    background-color: var(--gray-500);
+    background-color: var(--primary-700);
     transition: all 300ms ease-in;
 }
 .dropdown_toggle:hover::after{
@@ -398,7 +398,6 @@ img{
     width: 100%;
 }
 .product_card{
-    background: var(--card-gradient);
     border-radius: .25rem;
     overflow: hidden;
     outline: 2px solid var(--primary-200);

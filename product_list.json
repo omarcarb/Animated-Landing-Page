@@ -69,7 +69,7 @@
   "sale_price": 9.99,
   "description":"Protect your skin with this lightweight SPF lotion that harnesses the power of ocean-derived ingredients, perfect for eco-conscious sun lovers.",
   "tags": ["SPF","SunProtection","Ocean","EcoFriendly","Lightweight"],
-  "image": ""
+  "image": "./images/ocean_breeze_lotion.png"
 },{
   "name": "Lavender Calm Cream",
   "type": "Cream",
