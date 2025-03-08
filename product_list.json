@@ -51,7 +51,7 @@
   "sale_price": 27.99,
   "description":"This nourishing cream blends almond oil and honey for a luxurious feel, promoting soft, supple skin with eco-friendly ingredients.",
   "tags": ["Nourishing","Almond","Honey","Luxury","EcoConscious","No BPA"],
-  "image": ""
+  "image": "./images/almond_and_honey_cream.png"
 },{
   "name": "Herbal Essence Repair Cream",
   "type": "Repair Cream",
