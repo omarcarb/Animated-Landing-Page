@@ -33,7 +33,7 @@
   "sale_price": 59.99,
   "description":"A rich night cream that nourishes your skin with a blend of botanical extracts, ensuring you wake up refreshed and radiant.",
   "tags": ["NightCream","Botanical","Nourishing","EcoFriendly","BeautySleep"],
-  "image": ""
+  "image": "./images/bliss_night_cream.png"
 },{
   "name": "Citrus Fresh Face Gel",
   "type": "Gel",
