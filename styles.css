@@ -568,8 +568,9 @@ footer{
 }
 .footer_topright{
     display: flex;
+    gap: 4rem;
     width: 70%;
-    justify-content: space-around;
+    justify-content: right;
 }
 .disclaimer_text{
     font-size: .75rem;
